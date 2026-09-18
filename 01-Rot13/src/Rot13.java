@@ -12,7 +12,13 @@ public class Rot13 {
                     resultat += c;
                 }
             }         
-           
+           for (int j = 0; j < majuscules.length; j++) {
+                if (c == majuscules[i]) {
+                    c = (i + 13) % majuscules.length;
+                    resultat += c;
+                }
+            } 
+            //resultat += c;  
         }
 
         return resultat;    
